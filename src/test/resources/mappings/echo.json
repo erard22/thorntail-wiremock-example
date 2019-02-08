@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPattern": "/echo/([a-z]*)"
+  },
+  "response": {
+    "status": 200,
+    "body": "EchoResponse: {{request.path.[1]}}",
+    "transformers": ["response-template"],
+    "headers": {
+      "Content-Type": "text/plain"
+    }
+  }
+}
